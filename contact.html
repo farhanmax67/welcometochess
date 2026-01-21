@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact us and share your feedback about the chess program">
+    <title>Contact & Feedback - Chess Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="chess-icon">♔</span>
+                <span class="brand-text">Chess Academy</span>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="learn.html">Learn Chess</a></li>
+                <li><a href="life-skills.html">Life Skills</a></li>
+                <li><a href="chess-club.html">Chess Club</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact & Feedback</h1>
+            <p>We'd love to hear from you! Share your thoughts, suggestions, learning preferences, or questions about the chess program.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <!-- Feedback Form -->
+                <div class="form-container">
+                    <h2>Send a Message</h2>
+                    <p>Your input helps us improve the program and make it better for everyone. All feedback is welcome!</p>
+                    
+                    <!-- mailto fallback; replace with backend endpoint when available -->
+                    <form id="feedbackForm" class="feedback-form" action="mailto:farhanpanjvani@gmail.com" method="POST" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" aria-label="Name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="name@example.com" required aria-required="true" aria-label="Email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Share your thoughts, suggestions, or questions here..." required aria-required="true" aria-label="Message"></textarea>
+                        </div>
+
+                        <p class="life-link"><strong>Note:</strong> This form uses a mailto: fallback. To send directly without opening email, connect this form to a backend endpoint in the future.</p>
+
+                        <button type="submit" class="btn btn-primary">Send to farhanpanjvani@gmail.com</button>
+                    </form>
+
+                    <div id="form-success" class="form-message success-message" style="display: none;">
+                        <h3>✓ Thank You!</h3>
+                        <p>Your feedback has been received. We appreciate you taking the time to share your thoughts!</p>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Other Ways to Connect</h2>
+                    
+                    <div class="info-card">
+                        <h3>📧 General Inquiries</h3>
+                        <p>For general questions about the chess program, please use the form or reach out at chess club meetings.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>👥 Chess Club Meetings</h3>
+                        <p>The best way to connect is at our weekly chess club sessions. Come join us and meet the community!</p>
+                        <a href="chess-club.html" class="btn btn-outline">Learn About Chess Club</a>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>💡 Suggestions Welcome</h3>
+                        <p>We're always looking to improve! Whether it's about the website, lessons, or club activities, your ideas matter.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🎓 Educational Purpose</h3>
+                        <p>This website is part of an IB MYP Personal Project focused on empowering students through chess education. Your participation helps make this project meaningful!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Chess Academy</h3>
+                    <p>Empowering students through chess education</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="learn.html">Learn Chess</a></li>
+                        <li><a href="life-skills.html">Life Skills</a></li>
+                        <li><a href="chess-club.html">Chess Club</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html">Feedback Form</a></li>
+                        <li><a href="contact.html">Get in Touch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chess Academy. Educational purpose - IB MYP Personal Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

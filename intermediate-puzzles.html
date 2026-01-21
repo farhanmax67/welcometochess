@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Intermediate chess puzzles with interactive boards and life-skill reflection" />
+  <title>Intermediate Puzzles - Chess Academy</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-brand">
+        <span class="chess-icon">♔</span>
+        <span class="brand-text">Chess Academy</span>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html" class="active">Learn Chess</a></li>
+        <li><a href="life-skills.html">Life Skills</a></li>
+        <li><a href="chess-club.html">Chess Club</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Intermediate Puzzle Practice</h1>
+      <p>Train tactics like forks and pins. Move pieces, test ideas, and reflect on decision-making.</p>
+    </div>
+  </section>
+
+  <main class="puzzle-page" data-puzzle-root>
+    <div class="container">
+      <div class="puzzle-shell">
+        <div class="puzzle-top">
+          <div>
+            <div class="puzzle-counter" data-counter></div>
+            <h2 class="puzzle-title" data-title></h2>
+            <p class="puzzle-instruction" data-instruction></p>
+          </div>
+          <div class="puzzle-controls">
+            <button class="btn btn-outline" data-prev>Previous</button>
+            <button class="btn btn-outline" data-next>Next</button>
+            <button class="btn btn-secondary" data-reset>Reset</button>
+          </div>
+        </div>
+
+        <div class="interactive-board" aria-label="Interactive puzzle board"></div>
+
+        <p class="puzzle-feedback" data-feedback></p>
+
+        <section class="life-connection" aria-labelledby="life-connection-title">
+          <h3 id="life-connection-title">Real-Life Skill Connection</h3>
+          <p data-life-text></p>
+          <div class="reflection-box">
+            <h4>💭 Reflection</h4>
+            <p data-life-prompt></p>
+          </div>
+        </section>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="learn.html">Back to Learn</a>
+        <a class="btn btn-secondary" href="advanced-puzzles.html">Try Advanced Puzzles</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2024 Chess Academy. Educational purpose - IB MYP Personal Project.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/puzzles-data.js"></script>
+  <script src="js/chess-puzzles.js"></script>
+  <script>
+    window.initPuzzlePage('intermediate');
+  </script>
+</body>
+</html>
