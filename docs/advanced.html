@@ -3,56 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Advanced Level - Chess Basics</title>
-    <meta name="description" content="Master advanced chess strategies and endgame techniques.">
-
-    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
-    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
-
-    <style type="text/tailwindcss">
-    @layer theme {
+    <title>Advanced Strategy - Chess Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
         :root {
-            --chess-green: #006400;
-            --chess-black: #000000;
+            --primary: #006400;
+            --bg: #FDFBF7;
+            --text: #1a1a1a;
+            --card-bg: #ffffff;
         }
-    }
-
-    @layer base {
         body {
-            @apply text-[var(--chess-black)] antialiased bg-gray-50;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
         }
-        h1 {
-            @apply font-bold text-[var(--chess-black)];
+        header {
+            background: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
         }
-        h2 {
-            @apply font-bold text-[var(--chess-green)] text-xl mb-3 mt-6;
-        }
-        p {
-            @apply text-[var(--chess-black)] mb-4 leading-relaxed;
-        }
-    }
-
-    @layer components {
-        .card {
-            @apply bg-white p-8 rounded-lg shadow-sm border border-gray-100;
-        }
-        .section-container {
-            @apply max-w-4xl mx-auto px-4 py-8;
-        }
-        .nav-link {
-            @apply text-gray-600 hover:text-[var(--chess-green)] font-medium transition-colors;
-        }
-    }
+        h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin: 0; color: #000; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 1rem; }
+        h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--primary); }
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+        .section { margin-bottom: 4rem; }
+        img { width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .nav { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.9); padding: 1rem 2rem; border-radius: 50px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); backdrop-filter: blur(10px); display: flex; gap: 2rem; }
+        .nav a { text-decoration: none; color: #666; font-weight: 600; transition: color 0.3s; }
+        .nav a:hover, .nav a.active { color: var(--primary); }
     </style>
 </head>
 <body>
-    <div id="root"></div>
-    <script type="text/babel" src="components/Header.js"></script>
-    <script type="text/babel" src="components/AdvancedSection.js"></script>
-    <script type="text/babel" src="advanced-app.js"></script>
+    <header>
+        <h1>Advanced Strategy</h1>
+        <p style="font-style: italic; color: #666;">The high-level art of positional play.</p>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h2>Deep Positional Play</h2>
+            <img src="src/assets/chess-strategy.png" alt="Advanced Strategy" style="margin-bottom: 2rem;">
+            <h3>Strategic Thinking</h3>
+            <p>Advanced strategy involves evaluating pawn structures, king safety, and long-term planning. You must understand space, piece activity, and initiative. Prophylaxis—stopping your opponent's plans—is a hallmark of master play.</p>
+            <h3>The Technical Endgame</h3>
+            <p>Mastering endgames like King and Pawn or Rook vs Pawn separates masters from experts. Every square matters, and calculating precise variations is required for conversion.</p>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="beginner.html">Beginner</a>
+        <a href="intermediate.html">Intermediate</a>
+        <a href="advanced.html" class="active">Advanced</a>
+    </div>
 </body>
 </html>

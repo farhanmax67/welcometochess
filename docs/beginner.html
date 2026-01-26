@@ -3,56 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Beginner Level - Chess Basics</title>
-    <meta name="description" content="Learn the absolute basics of chess: the board, pieces, and setup.">
-
-    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
-    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
-
-    <style type="text/tailwindcss">
-    @layer theme {
+    <title>Beginner Chess - Chess Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
         :root {
-            --chess-green: #006400;
-            --chess-black: #000000;
+            --primary: #006400;
+            --bg: #FDFBF7;
+            --text: #1a1a1a;
+            --card-bg: #ffffff;
         }
-    }
-
-    @layer base {
         body {
-            @apply text-[var(--chess-black)] antialiased bg-gray-50;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
         }
-        h1 {
-            @apply font-bold text-[var(--chess-black)];
+        header {
+            background: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
         }
-        h2 {
-            @apply font-bold text-[var(--chess-green)] text-xl mb-3 mt-6;
-        }
-        p {
-            @apply text-[var(--chess-black)] mb-4 leading-relaxed;
-        }
-    }
-
-    @layer components {
-        .card {
-            @apply bg-white p-8 rounded-lg shadow-sm border border-gray-100;
-        }
-        .section-container {
-            @apply max-w-4xl mx-auto px-4 py-8;
-        }
-        .nav-link {
-            @apply text-gray-600 hover:text-[var(--chess-green)] font-medium transition-colors;
-        }
-    }
+        h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin: 0; color: #000; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 1rem; }
+        h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--primary); }
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+        .section { margin-bottom: 4rem; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+        .card { background: var(--card-bg); padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        img { width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .nav { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.9); padding: 1rem 2rem; border-radius: 50px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); backdrop-filter: blur(10px); display: flex; gap: 2rem; }
+        .nav a { text-decoration: none; color: #666; font-weight: 600; transition: color 0.3s; }
+        .nav a:hover, .nav a.active { color: var(--primary); }
     </style>
 </head>
 <body>
-    <div id="root"></div>
-    <script type="text/babel" src="components/Header.js"></script>
-    <script type="text/babel" src="components/BeginnerSection.js"></script>
-    <script type="text/babel" src="beginner-app.js"></script>
+    <header>
+        <h1>Beginner Chess</h1>
+        <p style="font-style: italic; color: #666;">Master the foundations of the game.</p>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h2>The Foundations</h2>
+            <div class="grid">
+                <div>
+                    <h3>What is Chess?</h3>
+                    <p>Chess is a two-player strategy game played on an 8x8 board with 64 squares. Each player starts with 16 pieces: one king, one queen, two rooks, two bishops, two knights, and eight pawns. The goal is to checkmate the opponent's king.</p>
+                    <h3>The Chessboard</h3>
+                    <p>The board is arranged in an 8x8 grid. Squares alternate light and dark. A key rule: "white on right" — the bottom-right square for each player must be light. Vertical columns are 'files' (a-h) and horizontal rows are 'ranks' (1-8).</p>
+                </div>
+                <div>
+                    <img src="src/assets/chessboard-setup.png" alt="Board Setup">
+                    <p style="text-align: center; font-size: 0.9rem; color: #666; margin-top: 0.5rem;">Standard starting position</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h3>Setting Up the Board</h3>
+            <p>Place the board so each player has a light square on their right. The back row from left to right: Rook, Knight, Bishop, Queen, King, Bishop, Knight, Rook. Front row: 8 pawns. The queen always starts on her own color.</p>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="beginner.html" class="active">Beginner</a>
+        <a href="intermediate.html">Intermediate</a>
+        <a href="advanced.html">Advanced</a>
+    </div>
 </body>
 </html>
