@@ -2,63 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Intermediate Chess Path</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Intermediate Level - Chess Basics</title>
+    <meta name="description" content="Learn chess openings and tactical patterns to improve your game.">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --chess-green: #006400;
+            --chess-black: #000000;
+        }
+    }
+
+    @layer base {
+        body {
+            @apply text-[var(--chess-black)] antialiased bg-gray-50;
+        }
+        h1 {
+            @apply font-bold text-[var(--chess-black)];
+        }
+        h2 {
+            @apply font-bold text-[var(--chess-green)] text-xl mb-3 mt-6;
+        }
+        p {
+            @apply text-[var(--chess-black)] mb-4 leading-relaxed;
+        }
+    }
+
+    @layer components {
+        .card {
+            @apply bg-white p-8 rounded-lg shadow-sm border border-gray-100;
+        }
+        .section-container {
+            @apply max-w-4xl mx-auto px-4 py-8;
+        }
+        .nav-link {
+            @apply text-gray-600 hover:text-[var(--chess-green)] font-medium transition-colors;
+        }
+    }
+    </style>
 </head>
 <body>
-
-<header class="page-header">
-    <h1>Intermediate Chess Learning Path</h1>
-    <p>Improve your tactics, planning, and decision-making by thinking one step ahead.</p>
-</header>
-
-<section class="content-section">
-    <h2>What You Will Learn</h2>
-    <ul>
-        <li>Common tactics: forks, pins, and skewers</li>
-        <li>Opening ideas and development</li>
-        <li>How to create and follow a plan</li>
-        <li>Evaluating risks before making decisions</li>
-    </ul>
-</section>
-
-<section class="content-section">
-    <h2>Life Skills Connection</h2>
-    <p>
-        Intermediate chess focuses on planning and predicting consequences.
-        These skills help you think ahead in exams, teamwork, and leadership situations.
-    </p>
-</section>
-
-<section class="content-section">
-    <h2>Practice Your Skills</h2>
-    <p>Apply your learning through interactive intermediate-level puzzles.</p>
-    <a class="btn btn-primary" href="intermediate-puzzles.html">Go to Intermediate Puzzles</a>
-</section>
-
-<section class="lesson-section">
-    <h2>Opening Understanding</h2>
-    <p>Control the center, develop pieces efficiently, plan to castle...</p>
-    <img src="assets/images/intermediate-opening.png" alt="Opening Example">
-</section>
-
-<section class="lesson-section">
-    <h2>Tactical Themes</h2>
-    <p>Discovered Attack, Double Attack, Deflection, Attraction...</p>
-    <img src="assets/images/intermediate-tactics.png" alt="Tactical Theme Example">
-</section>
-
-<section class="lesson-section">
-    <h2>Positional Concepts</h2>
-    <p>Weak squares, open vs closed positions, good vs bad bishops...</p>
-    <img src="assets/images/intermediate-positional.png" alt="Positional Concept Example">
-</section>
-
-<section class="practice-section">
-    <h2>Practice Puzzles</h2>
-    <a class="btn btn-primary" href="intermediate-puzzles.html">Go to Intermediate Puzzles</a>
-</section>
-
+    <div id="root"></div>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/IntermediateSection.js"></script>
+    <script type="text/babel" src="intermediate-app.js"></script>
 </body>
 </html>
-

@@ -2,36 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Beginner Chess Path</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Beginner Level - Chess Basics</title>
+    <meta name="description" content="Learn the absolute basics of chess: the board, pieces, and setup.">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --chess-green: #006400;
+            --chess-black: #000000;
+        }
+    }
+
+    @layer base {
+        body {
+            @apply text-[var(--chess-black)] antialiased bg-gray-50;
+        }
+        h1 {
+            @apply font-bold text-[var(--chess-black)];
+        }
+        h2 {
+            @apply font-bold text-[var(--chess-green)] text-xl mb-3 mt-6;
+        }
+        p {
+            @apply text-[var(--chess-black)] mb-4 leading-relaxed;
+        }
+    }
+
+    @layer components {
+        .card {
+            @apply bg-white p-8 rounded-lg shadow-sm border border-gray-100;
+        }
+        .section-container {
+            @apply max-w-4xl mx-auto px-4 py-8;
+        }
+        .nav-link {
+            @apply text-gray-600 hover:text-[var(--chess-green)] font-medium transition-colors;
+        }
+    }
+    </style>
 </head>
 <body>
-<header class="page-header">
-    <h1>Beginner Chess Path</h1>
-    <p>Learn the fundamentals of chess while building focus, patience, and decision-making skills.</p>
-</header>
-
-<section class="lesson-section">
-    <h2>Chess Basics</h2>
-    <p>Chess is a two-player strategy game played on an 8x8 board with 64 squares...</p>
-    <img src="assets/images/beginner-board.png" alt="Chessboard Basics Example">
-</section>
-
-<section class="lesson-section">
-    <h2>Understanding Chess Pieces</h2>
-    <p>Each piece moves differently, with unique strengths and rules...</p>
-    <img src="assets/images/beginner-pieces.png" alt="Chess Pieces Visual">
-</section>
-
-<section class="lesson-section">
-    <h2>Chess Rules</h2>
-    <p>Learn check, checkmate, castling, and pawn promotion...</p>
-    <img src="assets/images/beginner-rules.png" alt="Chess Rules Visual">
-</section>
-
-<section class="practice-section">
-    <h2>Practice Puzzles</h2>
-    <a class="btn btn-primary" href="beginner-puzzles.html">Go to Beginner Puzzles</a>
-</section>
+    <div id="root"></div>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/BeginnerSection.js"></script>
+    <script type="text/babel" src="beginner-app.js"></script>
 </body>
 </html>
