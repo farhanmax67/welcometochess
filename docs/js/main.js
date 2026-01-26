@@ -1,5 +1,6 @@
 // main.js
 console.log("JavaScript connected");
+
 // Quiz / Puzzle logic
 function checkAnswer(button, correct) {
   const feedback = button.parentElement.querySelector(".feedback");
@@ -12,3 +13,4 @@ function checkAnswer(button, correct) {
     feedback.style.color = "red";
   }
 }
+
