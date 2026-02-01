@@ -245,6 +245,19 @@ li { margin-bottom: var(--spacing-xs); }
     color: var(--color-primary);
 }
 
+.hero .btn-outline {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.95);
+    color: rgba(255, 255, 255, 0.98);
+}
+
+.hero .btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--color-primary-dark);
+    border-color: rgba(255, 255, 255, 0.95);
+}
+
+
 .btn-outline:hover {
     background-color: var(--color-primary);
     color: var(--color-white);
