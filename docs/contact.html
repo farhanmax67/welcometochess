@@ -48,9 +48,19 @@
                     <h2>Send a Message</h2>
                     <p>Your input helps us improve the program and make it better for everyone. All feedback is welcome!</p>
                     
-                    <!-- mailto fallback; replace with backend endpoint when available -->
-                    <form id="feedbackForm" class="feedback-form" action="mailto:farhanpanjvani@gmail.com" method="POST" enctype="text/plain">
-                        <div class="form-group">
+                   <form id="feedbackForm" class="feedback-form" action="https://formspree.io/f/maqbdygp" method="POST">
+                       <form id="feedbackForm" class="feedback-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+    <!-- Formspree hidden settings -->
+    <input type="hidden" name="_subject" value="New Chess Academy Feedback">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name">
+    </div>
+
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" placeholder="Your name" aria-label="Name">
                         </div>
@@ -67,7 +77,7 @@
 
                         <p class="life-link"><strong>Note:</strong> This form uses a mailto: fallback. To send directly without opening email, connect this form to a backend endpoint in the future.</p>
 
-                        <button type="submit" class="btn btn-primary">Send to farhanpanjvani@gmail.com</button>
+                       <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
 
                     <div id="form-success" class="form-message success-message" style="display: none;">
