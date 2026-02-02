@@ -1194,4 +1194,59 @@ textarea:focus {
   padding: 0.8rem 1.2rem;
   font-size: 1rem;
 }
+/* ===== CONTACT PAGE HARD FIX (override) ===== */
+
+.contact-content{
+  display: flex !important;
+  gap: 2rem !important;
+  align-items: flex-start !important;
+}
+
+.form-container{
+  flex: 1 1 60% !important;
+  min-width: 320px !important;
+}
+
+.contact-info{
+  flex: 1 1 40% !important;
+  min-width: 260px !important;
+}
+
+/* Force form fields to stack (fixes "email on right") */
+.feedback-form{
+  display: block !important;
+}
+
+.feedback-form .form-group{
+  display: block !important;
+  width: 100% !important;
+  margin-bottom: 1rem !important;
+}
+
+.feedback-form label{
+  display: block !important;
+  margin-bottom: 0.35rem !important;
+}
+
+.feedback-form input,
+.feedback-form textarea{
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Fix huge button */
+.feedback-form button.btn{
+  width: auto !important;
+  display: inline-block !important;
+  padding: 0.8rem 1.2rem !important;
+  font-size: 1rem !important;
+}
+
+/* Mobile: stack columns */
+@media (max-width: 900px){
+  .contact-content{
+    flex-direction: column !important;
+  }
+}
 
